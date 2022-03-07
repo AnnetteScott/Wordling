@@ -27,6 +27,7 @@ function wordOptionSelect(){
 
 function reSetGameBoard(){
     drawPlayBoard(numberSelected, numberSelected + 1);
+    pickRandomWord();
 }
 
 function drawPlayBoard(wordLength, guessAmount){

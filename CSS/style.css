@@ -93,15 +93,15 @@ button:hover {
 	transition: inherit;
 }
 
-.letter_square.correct {
-	background-color: #538d4e;
-	border-color: #538d4e;
+.correct {
+	background-color: #538d4e !important; 
+	border-color: #538d4e !important;
 }
-.letter_square.nearly {
+.nearly {
 	background-color: #b59f3b;
 	border-color: #b59f3b;
 }
-.letter_square.wrong {
+.wrong {
 	background-color: #3a3a3c;
 	border-color: #3a3a3c;
 }
