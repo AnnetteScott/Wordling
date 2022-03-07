@@ -123,7 +123,7 @@ button:hover {
 	align-items: center;
 	width: var(--keyboard_key_size);
 	aspect-ratio: 0.741;
-	margin: 2px;
+	margin: 3px;
 	background-color: #3a3a3c;
 	border: 2px solid #3a3a3c;
 	border-radius: 5px;
