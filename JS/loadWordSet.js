@@ -1,5 +1,5 @@
 let fs = require("fs");
-let wordNameList = [5,6,7];
+let wordNameList = [5];
 var numberSelected = 5;
 var masterDict;
 
