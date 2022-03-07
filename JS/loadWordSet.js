@@ -11,6 +11,7 @@ function read_file(path){
 function loadWordSet(){
     numberSelected = $("#word_selection_box option:selected").attr('number')
     masterDict = JSON.parse(read_file(`Wordfiles/${number}-letter.json`));
+    drawPlayBoard(numberSelected, numberSelected + 1);
 }
 
 function wordOptionSelect(){
@@ -24,5 +25,24 @@ function wordOptionSelect(){
     $('#word_selection_box').append(elem);
 }
 
+function reSetGameBoard(){
+    drawPlayBoard(numberSelected, numberSelected + 1);
+}
+
+function drawPlayBoard(wordLength, guessAmount){
+    let letter_grid = '';
+    let letter_row = '';
+    for(let r = 0;r < guessAmount;r++){
+        letter_row = '';
+        for(let c = 0;c < wordLength;c++){
+            letter_row += DOM_Blocks.letter_square('');
+        }
+        letter_grid += DOM_Blocks.letter_row(letter_row);
+    }
+    $('#letter_grid').empty();
+    $('#letter_grid').append(letter_grid);
+}
+
 wordOptionSelect();
 masterDict = JSON.parse(read_file(`Wordfiles/${5}-letter.json`));
+drawPlayBoard(numberSelected, numberSelected + 1)

@@ -16,6 +16,7 @@
         <div id="letter_grid">
 			<!--Generated Content-->
 		</div>
+        <button onclick="reSetGameBoard()">Reset</button>
 		
         <div id="keyboard">
             <div class="keyboard_row">
@@ -60,20 +61,5 @@
 	<script src="JS/domBlocks.js"></script>
 	<script src="JS/loadWordSet.js"></script>
 	<script src="JS/wordpicker.js"></script>
-    <script>
-        function test_grid(cols = 5, rows = 6){
-            let letter_grid = '';
-            let letter_row = '';
-            for(let r = 0;r < rows;r++){
-                letter_row = '';
-                for(let c = 0;c < cols;c++){
-                    letter_row += DOM_Blocks.letter_square('');
-                }
-                letter_grid += DOM_Blocks.letter_row(letter_row);
-            }
-            document.getElementById('letter_grid').innerHTML = letter_grid;
-        }
-        test_grid();
-    </script>
 	<script>if (window.module) module = window.module;</script>
 </html>
