@@ -1,5 +1,5 @@
 let fs = require("fs");
-let wordNameList = [5];
+let wordNameList = [5,6,7];
 var numberSelected = 5;
 var masterDict;
 
@@ -15,7 +15,7 @@ function loadWordSet(){
 }
 
 function wordOptionSelect(){
-    elem = '<label for="wordSetSelection">Choose a Word Set:</label>';
+    elem = '<label for="wordSetSelection">Choose a word set: </label>';
     elem += '<select onchange="loadWordSet()" name="wordSetSelection" id="wordSetSelection">';
     wordNameList.forEach(function(number){
         elem += DOM_Blocks.word_selection(number);

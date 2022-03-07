@@ -1,6 +1,6 @@
 let DOM_Blocks = {
     word_selection: function (num){
-        return `<option number="${num}">${num}</option>`
+        return `<option number="${num}">${num} letters</option>`
     },
 
     letter_row: function (squares = ''){
