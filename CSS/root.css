@@ -1,0 +1,53 @@
+:root {
+	--background_colour: #121213;
+	--text_colour: white;
+    --body_margin: 50px;
+	--letter_square_size: 60px;
+	--keyboard_key_size: 43px;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+  	font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+/* Dim */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: #FFFFFF23;
+	border-radius: 10px;
+	box-shadow: 0px 0px 9px -5px grey inset, 0px 4px 16px -16px black;
+	backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-corner {
+  	background: rgba(0,0,0,0);
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #050779; 
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  	background: #6d19a9; 
+}
+
+.hidden {
+	display: none !important;
+}

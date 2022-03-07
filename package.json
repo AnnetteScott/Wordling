@@ -1,0 +1,25 @@
+{
+  "name": "wordling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotNatural21/Wordling.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotNatural21/Wordling/issues"
+  },
+  "homepage": "https://github.com/NotNatural21/Wordling#readme",
+  "devDependencies": {
+    "electron": "^17.1.0"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

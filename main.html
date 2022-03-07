@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel="stylesheet" href="CSS/root.css">
+		<link rel="stylesheet" href="CSS/style.css">
+	</head>
+	<body>
+        <h1>Wordling</h1>
+		<div id="word_selection">
+			<div id="word_selection_box">
+			<!--Generated Content-->
+			</div>
+		</div>
+		
+        <div id="letter_grid">
+			<!--Generated Content-->
+		</div>
+		
+        <div id="keyboard">
+            <div class="keyboard_row">
+                <div class="keyboard_key">Q</div>
+                <div class="keyboard_key">W</div>
+                <div class="keyboard_key">E</div>
+                <div class="keyboard_key">R</div>
+                <div class="keyboard_key">T</div>
+                <div class="keyboard_key">Y</div>
+                <div class="keyboard_key">U</div>
+                <div class="keyboard_key">I</div>
+                <div class="keyboard_key">O</div>
+                <div class="keyboard_key">P</div>
+            </div>
+            <div class="keyboard_row">
+                <div class="keyboard_key">A</div>
+                <div class="keyboard_key">S</div>
+                <div class="keyboard_key">D</div>
+                <div class="keyboard_key">F</div>
+                <div class="keyboard_key">G</div>
+                <div class="keyboard_key">H</div>
+                <div class="keyboard_key">J</div>
+                <div class="keyboard_key">K</div>
+                <div class="keyboard_key">L</div>
+            </div>
+            <div class="keyboard_row">
+                <div class="keyboard_key">ENTER</div>
+                <div class="keyboard_key">Z</div>
+                <div class="keyboard_key">X</div>
+                <div class="keyboard_key">C</div>
+                <div class="keyboard_key">V</div>
+                <div class="keyboard_key">B</div>
+                <div class="keyboard_key">N</div>
+                <div class="keyboard_key">M</div>
+                <div class="keyboard_key">BACK</div>
+            </div>
+		</div>
+	</body>
+
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script src="JS/jquery-3.6.0.min.js"></script>
+	<script src="JS/domBlocks.js"></script>
+	<script src="JS/loadWordSet.js"></script>
+	<script src="JS/wordpicker.js"></script>
+    <script>
+        function test_grid(cols = 5, rows = 6){
+            let letter_grid = '';
+            let letter_row = '';
+            for(let r = 0;r < rows;r++){
+                letter_row = '';
+                for(let c = 0;c < cols;c++){
+                    letter_row += DOM_Blocks.letter_square('');
+                }
+                letter_grid += DOM_Blocks.letter_row(letter_row);
+            }
+            document.getElementById('letter_grid').innerHTML = letter_grid;
+        }
+        test_grid();
+    </script>
+	<script>if (window.module) module = window.module;</script>
+</html>
