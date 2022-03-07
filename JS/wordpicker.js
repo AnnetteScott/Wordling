@@ -54,7 +54,7 @@ function handleInput(){
                 if(randomWord.indexOf(enteredLetters.charAt(i)) < 0){// Incorrect Letter
                     console.log('Incorrect Letter');
 					$(`.letter_row:nth-of-type(${row_index})`).children().eq(i).addClass('wrong');
-                    $(`[key=${(enteredLetters.charAt(i).toUpperCase())}]`).addClass('hidden');
+                    $(`[key=${(enteredLetters.charAt(i).toUpperCase())}]`).addClass('wrong');
 
                 }else if(enteredLetters.charAt(i) == randomWord.charAt(i)){//Correct Letter, Right Place
                     console.log('Correct Letter, Right Place');
