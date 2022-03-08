@@ -1,7 +1,6 @@
 body{
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: center;
 	align-items: center;
 	width: calc(100vw - (var(--body_margin) * 2));
 	height: calc(100vh - (var(--body_margin) * 2));
