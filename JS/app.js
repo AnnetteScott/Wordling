@@ -1,5 +1,5 @@
 var fs = require("fs");
-var wordNameList = [5];
+var wordNameList = [5, 6];
 var numberSelected = 5;
 var masterDict = {};
 var randomWord;
@@ -22,14 +22,17 @@ function read_file(path){
 ///////////////////////////Start up and render functions///////////////////
 ///////////////////////////////////////////////////////////////////////////
 function loadWordSet(){
-    numberSelected = $("#word_selection_box option:selected").attr('number')
+    numberSelected = parseInt($("#word_selection_box option:selected").attr('number'));
     masterDict = JSON.parse(read_file(`Wordfiles/${numberSelected}-letter.json`));
     drawPlayBoard(numberSelected, numberSelected + 1);
+    drawKeyBoard();
+    pickRandomWord()
 }
 
 function pickRandomWord(){
     let randomDict = randomProperty(masterDict);
     randomWord = randomProperty(randomDict);
+    console.log(randomWord);
 }
 
 function wordOptionSelect(){
@@ -87,7 +90,7 @@ function reSetGameBoard(){
     pickRandomWord();
     $('#reset_button').addClass('hidden');
     drawKeyBoard();
-    console.log(randomWord)
+    window.addEventListener("keydown", keyDownFunction);
 }
 
 ///////////////////////////////////////////////////////////////////////////
