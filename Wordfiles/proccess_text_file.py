@@ -14,7 +14,7 @@ def sortWords():
     'G': [], 'H': [], 'I': [], 'J': [], 'K': [], 'L': [], 'M': [], 
     'N': [], 'O': [], 'P': [], 'Q': [], 'R': [], 'S': [], 'T': [], 
     'U': [], 'V': [], 'W': [], 'X': [], 'Y': [], 'Z': []}
-    rawList = readLines("RawTXT/" + nameOfTxt + ".txt")
+    rawList = readLines("Wordfiles/RawTXT/" + nameOfTxt + ".txt")
     for word in rawList:
         sortedDict[word[0].upper()].append(word)
 
