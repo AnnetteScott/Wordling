@@ -1,6 +1,6 @@
 import json
-nameOfTxt = 'sgb-5-letter-words'
-nameOfJSON = '5-letter'
+nameOfTxt = 'sgb-6-letter-words'
+nameOfJSON = '6-letter'
 
 def readLines(filename):
     input_file = open(filename, "r")
